@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap")
+    style
+        include styles.css
+    body
+        .message
+            if logo
+                .paper
+                    img(src=logo)
+            .container.paper
+                div
+                    h1(class="text-center") Contact Form Submission
+                .row
+                    .item
+                        h3 From:
+                    .item
+                        p #{name}
+                if subject
+                    .row
+                        .item 
+                            h3 Subject:
+                        .item 
+                            p #{subject}
+                .row
+                    .item
+                        h3 Message:
+                    .item
+                        p #{message}
+        
+        
