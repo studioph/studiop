@@ -21,7 +21,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - run: echo ${{ github.event.pull_request.base.ref }} && echo "$github.event.pull_request.base.ref"
+    - run: echo ${{ github.event.pull_request.head.ref }}
     
 #     - name: Firebase CLI Deployment
 #       uses: doonstore/firebase-deploy@v1
