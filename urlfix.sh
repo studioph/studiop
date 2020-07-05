@@ -7,7 +7,7 @@ readarray -d '' files < <(find public -name *.css -print0)
 
 # replace any urls still referencing local WordPress
 for f in "${files[@]}"; do
-  sed -i 's+$1+studiop.page+g' $f
+  sed -i 's+192.168.2.9:8081/WordPress+studiop.page+g' $f
   sed -i 's+wp-content+contents+g' $f
   sed -i 's+wp-includes+inc+g' $f
 done
