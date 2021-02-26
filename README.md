@@ -3,4 +3,4 @@ My personal website, hosted using Firebase/Google Cloud. It is actually quite ea
 
 This site is hosted on Firebase, and as such the content of the `functions` directory is intended to be utilized with Firebase Functions (Google Cloud Functions). There is currently 1 function for handling contact form submissions.
 
-The header and footer scripts in the root of the repository are for conditional loading of Google reCAPTCHA and form submission logic.
+The header and footer scripts in the root of the repository are for conditional loading of Google reCAPTCHA and form submission logic, and are inserted using a WordPress plugin.
