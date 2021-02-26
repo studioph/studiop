@@ -17,13 +17,18 @@ if (typeof juice === "undefined") {
   var juice = require("juice");
 }
 
-if (typeof mailTransport === "undefined") {
-  var mailTransport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: config.gmail.email,
-      pass: config.gmail.password
-    },
+if (typeof OAuth2 === "undefined"){
+  const { google } = require ("googleapis");
+  var OAuth2 = google.auth.OAuth2;
+}
+
+if (typeof OAuth2Client === "undefined"){
+  var OAuth2Client = new OAuth2(
+    config.oauth.client_id,
+    config.oauth.client_secret
+  );
+  OAuth2Client.setCredentials({
+    refresh_token: config.oauth.refresh_token
   });
 }
 
@@ -37,6 +42,7 @@ exports.form_handler = functions.https.onRequest((req, res) => {
     ...vars,
     logo: config.logo ? config.logo.path : null,
   });
+
   const message = {
     from: config.address.from,
     to: config.address.to,
@@ -44,6 +50,19 @@ exports.form_handler = functions.https.onRequest((req, res) => {
     subject: config.message.subject + (vars.subject.length > 0 ? `: ${vars.subject}` : ''),
     html: juice(html),
   };
+
+  const mailTransport = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      type: "OAuth2",
+      user: config.mail.user,
+      clientId: config.oauth.client_id,
+      clientSecret: config.oauth.client_secret,
+      refreshToken: config.oauth.refresh_token,
+      accessToken: OAuth2Client.getAccessToken()
+    }
+  });
+
   mailTransport
     .sendMail(message)
     .then((result) => {
