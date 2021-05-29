@@ -1,0 +1,180 @@
+/* Additional CSS styles for the site */
+
+/* LANDING PAGE */
+
+#container.fluida-landing-page{
+	margin: 0;
+	max-width: 100%;
+}
+
+#lp-text-one, #lp-text-one .lp-text-inside{
+	padding: 0
+}
+#lp-text-one .lp-text-content, #lp-text-one .lp-text-inside{
+	max-width: 100%
+}
+
+.tracks-overview{
+	padding: 5% 5% 0 5%;
+}
+
+@media (min-width: 600px) and (max-width: 781px){
+	.tracks-overview .wp-block-column{
+		margin-left: 0;
+		flex-basis: 100% !important;
+	}
+	.tracks-overview .wp-block-column:not(:first-child){
+		margin-left: 0;
+		flex-basis: 100% !important;
+	}
+}
+
+@media (min-width: 782px) and (max-width: 914px){
+	.tracks-overview .wp-block-column{
+		margin-left: 0;
+		flex-basis: 100% !important;
+	}
+	.tracks-overview .wp-block-column:not(:first-child){
+		margin-left: 0;
+		flex-basis: 100% !important;
+	}
+}
+
+@media (min-width: 915px){
+	.tracks-overview .wp-block-column{
+		margin-left: 32px;
+		flex-basis: 0;
+	}
+}
+
+#lp-text-three .wp-block-button:hover{
+	background-color: white;
+}
+
+#lp-text-three .wp-block-buttons{
+	text-align: center;
+}
+
+#lp-text-four{
+	margin-bottom: 2em;
+}
+
+
+#cryout_ajax_more_trigger{
+	opacity: 0.9;
+	background: white;
+	color: #BC926B;
+}
+
+input[type="text"], input[type="email"],
+textarea{
+	background: white;
+	box-shadow: 0px 1px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 0px 0px 0px rgba(0,0,0,0.12);
+}
+
+.wpforms-submit-container{
+	text-align: center;
+}
+
+.submit-button{
+	background-color: transparent;
+	border: 3px solid;
+	font:inherit;
+	font-weight: bold;
+	padding: 8px 22px 5px;
+}
+
+.submit-button:hover{
+	background-color: white;
+}
+
+.submit-button:disabled{
+	background-color: lightgray;
+	opacity:0.5;
+	transition: none;
+}
+
+/* PAGES */
+
+#masthead .header-image{
+	width: 100%;
+}
+
+@media (max-width: 530px){
+	#container:not(.fluida-landing-page) #main{
+		margin-top: -175px
+	}
+}
+
+@media (min-width: 531px){
+	#container:not(.fluida-landing-page) #main{
+		margin-top: -385px;
+	}
+}
+
+#container:not(.fluida-landing-page) #main{
+	margin-bottom: 2em;
+	border-radius: 4px;
+}
+
+#container:not(.fluida-landing-page){
+	width: 90%;
+}
+
+#content, #content #container{
+	overflow: visible;
+}
+
+article.hentry{
+	margin-bottom: 0;
+}
+
+.wp-block-column .paper, .reel-placeholder{
+margin-bottom: 14px;
+}
+
+.wp-block-media-text__content .paper{
+	margin-top: 8px;
+}
+
+/* GLOBAL */
+
+#colophon, #lp-text-three, #lp-text-four, .tracks-overview, article.hentry{
+	background: rgba(255,255,255,0.9)
+}
+
+#toTop{
+	margin: 0 50%;
+}
+
+.wp-block-audio{
+	width: 100%;
+	max-width: 500px;
+	text-align: center;
+}
+.wp-block-audio audio{
+	min-width: 100%;
+}
+
+.fluida-elementradius button{
+	border-radius: 0;
+}
+
+.paper {
+	border-radius: 4px;
+	background-color:#FBFBFB;
+	padding: 8px;
+}
+
+.work{
+	padding: 8px 16px 0;
+}
+
+.reel-placeholder{
+	max-height: 200px
+}
+
+#colophon, #container:not(.fluida-landing-page) #main, #content-masonry article, audio, .wp-block-button, img:not(.wpforms-submit-spinner), figure.is-type-video .wp-block-embed__wrapper, footer, .paper, .wp-block-separator, .tracks-overview, .reel-placeholder{
+	box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+      0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+}

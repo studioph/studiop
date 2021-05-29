@@ -3,6 +3,9 @@
  */
 
 var formHandler = (function () {
+  if (document.querySelector('#cryout_ajax_more_trigger')){
+    document.querySelector('#cryout_ajax_more_trigger').onclick = () => window.location = '/news/page2'
+  }
   //only load if there is a form on the page
   const re = /^\/$|(\/WordPress\/)$|(contact\/)/;
   if (window.location.pathname.match(re)) {
