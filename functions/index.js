@@ -35,8 +35,8 @@ if (typeof OAuth2Client === "undefined"){
 exports.form_handler = functions.https.onRequest((req, res) => {
   res.set("Access-Control-Allow-Origin", "*");
   res.set("Access-Control-Allow-Headers", "*");
-  const vars = JSON.parse(req.body);
-  console.log(vars);
+  console.log(`Received request body: ${req.body}`);
+
   const fn = pug.compileFile(config.template.path);
   const html = fn({
     ...vars,
@@ -58,8 +58,7 @@ exports.form_handler = functions.https.onRequest((req, res) => {
       user: config.mail.user,
       clientId: config.oauth.client_id,
       clientSecret: config.oauth.client_secret,
-      refreshToken: config.oauth.refresh_token,
-      accessToken: OAuth2Client.getAccessToken()
+      refreshToken: config.oauth.refresh_token
     }
   });
 
