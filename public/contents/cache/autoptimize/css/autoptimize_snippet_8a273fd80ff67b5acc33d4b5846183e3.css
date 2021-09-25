@@ -128,7 +128,7 @@ body.rtl .wpforms-field-phone input[type=tel] {direction: ltr;unicode-bidi: embe
 .wpforms-container .wpforms-field-date-time-date-sep {display: inline-block;padding: 0 5px;}
 .wpforms-container .wpforms-field-date-time-date-year, .wpforms-container .wpforms-field-date-time-date-day, .wpforms-container .wpforms-field-date-time-date-month {display: inline-block;width: auto;}
 .wpforms-container .wpforms-datepicker-wrap {position: relative;}
-.wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {position: absolute;background-image: url("//studiop.page/contents/plugins/wpforms-lite/assets/css/../images/times-solid-white.svg");background-position: 50% 50%;background-repeat: no-repeat;background-color: #ccc;background-size: 8px;width: 16px;height: 16px;cursor: pointer;display: block;border-radius: 50%;right: 10px;top: 50%;margin-top: -8px;transition: all .3s;}
+.wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {position: absolute;background-image: url("contents/plugins/wpforms-lite/assets/css/../images/times-solid-white.svg");background-position: 50% 50%;background-repeat: no-repeat;background-color: #ccc;background-size: 8px;width: 16px;height: 16px;cursor: pointer;display: block;border-radius: 50%;right: 10px;top: 50%;margin-top: -8px;transition: all .3s;}
 .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear:hover {background-color: red;}
 .wpforms-container .wpforms-datepicker-wrap .wpforms-field-small+.wpforms-datepicker-clear {right: calc(75% + 10px);}
 .wpforms-container .wpforms-datepicker-wrap .wpforms-field-medium+.wpforms-datepicker-clear {right: calc(40% + 10px);}

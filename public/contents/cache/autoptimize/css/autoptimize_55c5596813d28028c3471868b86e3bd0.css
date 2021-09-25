@@ -1607,7 +1607,7 @@ article.hentry .post-thumbnail-container>a.responsive-featured-image:hover img {
 #cryout_ajax_more_trigger>span:before {font-size: 1em;}
 .staticslider-caption-buttons {margin-top: 3em;}
 a[class^=staticslider-button], .seriousslider.seriousslider-theme .seriousslider-caption-buttons a {font-size: 1em;}
-.autoptimize-loading {display: none;position: fixed;background-color: rgba(102,102,102,.8);background-image: url("//studiop.page/contents/plugins/autoptimize/classes/static/loading.gif");background-position: center;background-repeat: no-repeat;top: 0;left: 0;width: 100%;height: 100%;z-index: 9000000000;}
+.autoptimize-loading {display: none;position: fixed;background-color: rgba(102,102,102,.8);background-image: url("contents/plugins/autoptimize/classes/static/loading.gif");background-position: center;background-repeat: no-repeat;top: 0;left: 0;width: 100%;height: 100%;z-index: 9000000000;}
 #wp-admin-bar-autoptimize .white {color: #eee;}
 #wp-admin-bar-autoptimize .green {color: #26bd26;}
 #wp-admin-bar-autoptimize .orange {color: #ec9103;}
@@ -1815,7 +1815,7 @@ body.rtl .wpforms-field-phone input[type=tel] {direction: ltr;unicode-bidi: embe
 .wpforms-container .wpforms-field-date-time-date-sep {display: inline-block;padding: 0 5px;}
 .wpforms-container .wpforms-field-date-time-date-year, .wpforms-container .wpforms-field-date-time-date-day, .wpforms-container .wpforms-field-date-time-date-month {display: inline-block;width: auto;}
 .wpforms-container .wpforms-datepicker-wrap {position: relative;}
-.wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {position: absolute;background-image: url("//studiop.page/contents/plugins/wpforms-lite/assets/css/../images/times-solid-white.svg");background-position: 50% 50%;background-repeat: no-repeat;background-color: #ccc;background-size: 8px;width: 16px;height: 16px;cursor: pointer;display: block;border-radius: 50%;right: 10px;top: 50%;margin-top: -8px;transition: all .3s;}
+.wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {position: absolute;background-image: url("contents/plugins/wpforms-lite/assets/css/../images/times-solid-white.svg");background-position: 50% 50%;background-repeat: no-repeat;background-color: #ccc;background-size: 8px;width: 16px;height: 16px;cursor: pointer;display: block;border-radius: 50%;right: 10px;top: 50%;margin-top: -8px;transition: all .3s;}
 .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear:hover {background-color: red;}
 .wpforms-container .wpforms-datepicker-wrap .wpforms-field-small+.wpforms-datepicker-clear {right: calc(75% + 10px);}
 .wpforms-container .wpforms-datepicker-wrap .wpforms-field-medium+.wpforms-datepicker-clear {right: calc(40% + 10px);}
