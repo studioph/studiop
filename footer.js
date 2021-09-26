@@ -99,15 +99,14 @@ var formHandler = (function () {
         method: "post",
         body: JSON.stringify(data),
       });
-      const body = await response.json();
-      return [response.ok, body.rejected ? body.rejected.length : -1];
+      return response.ok;
     }
 
-    function showMessage([ok, rejected]) {
+    function showMessage(ok) {
       spinner.slideToggle("fast");
       submitContainer.append(
         `<p>${
-          ok && rejected === 0
+          ok
             ? "Thanks for reaching out! I'll be in touch soon."
             : "Sorry, there was an error submitting your message. Please try again."
         }</p>`
