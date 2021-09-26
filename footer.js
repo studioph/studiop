@@ -13,7 +13,7 @@ var formHandler = (function () {
   }
   function customizeForm() {
     const url =
-      "https://api.studiop.page/live/submit";
+      "https://api.studiop.page/submit";
     const sitekey = "6LcfmvIUAAAAAPkrYaw7f4Nh1YqZZGFJLbNKD5LT";
     const [
       form,
