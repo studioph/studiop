@@ -96,8 +96,11 @@ var formHandler = (function () {
 
     async function sendData(url, data) {
       const response = await fetch(url, {
-        method: "post",
+        method: "POST",
         body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'applicaiton/json'
+        }
       });
       const body = await response.json();
       return [response.ok, body.rejected ? body.rejected.length : -1];

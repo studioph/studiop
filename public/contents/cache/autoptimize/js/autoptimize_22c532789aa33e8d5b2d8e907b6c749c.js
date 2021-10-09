@@ -9,7 +9,7 @@ function validate(){submitButton[0].disabled=!requiredInputs.every((i)=>i.validi
 async function formHandler(){hideForm();const data=convertFormData();try{const result=await sendData(url,data);showMessage(result);}catch(error){console.error(error);showMessage([false,-1]);}}
 function hideForm(){formContainer.slideToggle("medium");submitButton.slideToggle("fast");spinner.slideToggle("medium");}
 function convertFormData(){const formValues=form.serializeArray().reduce((acc,val)=>{acc[val.name]=val.value;return acc;},{});const toSend=Object.fromEntries(["name","email","subject","message"].map((val,index)=>[val,formValues[`wpforms[fields][${++index}]`],]));form[0].reset();return toSend;}
-async function sendData(url,data){const response=await fetch(url,{method:"post",body:JSON.stringify(data),});const body=await response.json();return[response.ok,body.rejected?body.rejected.length:-1];}
+async function sendData(url,data){const response=await fetch(url,{method:"POST",body:JSON.stringify(data),headers:{'Content-Type':'application/json'}});const body=await response.json();return[response.ok,body.rejected?body.rejected.length:-1];}
 function showMessage([ok,rejected]){spinner.slideToggle("fast");submitContainer.append(`<p>${
           ok && rejected === 0
             ? "Thanks for reaching out! I'll be in touch soon."
