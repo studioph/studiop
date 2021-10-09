@@ -11,7 +11,7 @@ function validate(){submitButton[0].disabled=!requiredInputs.every((i)=>i.validi
 async function formHandler(){hideForm();const data=convertFormData();try{const result=await sendData(url,data);showMessage(result);}catch(error){console.error(error);showMessage([false,-1]);}}
 function hideForm(){formContainer.slideToggle("medium");submitButton.slideToggle("fast");spinner.slideToggle("medium");}
 function convertFormData(){const formValues=form.serializeArray().reduce((acc,val)=>{acc[val.name]=val.value;return acc;},{});const toSend=Object.fromEntries(["name","email","subject","message"].map((val,index)=>[val,formValues[`wpforms[fields][${++index}]`],]));form[0].reset();return toSend;}
-async function sendData(url,data){const response=await fetch(url,{method:"post",body:JSON.stringify(data),});return response.ok;}
+async function sendData(url,data){const response=await fetch(url,{method:"POST",body:JSON.stringify(data),headers:{'Content-Type':'application/json'}});return response.ok;}
 function showMessage(ok){spinner.slideToggle("fast");submitContainer.append(`<p>${
           ok
             ? "Thanks for reaching out! I'll be in touch soon."

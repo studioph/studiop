@@ -96,8 +96,11 @@ var formHandler = (function () {
 
     async function sendData(url, data) {
       const response = await fetch(url, {
-        method: "post",
+        method: "POST",
         body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
       return response.ok;
     }
