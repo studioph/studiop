@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("fonts/Oswald-VariableFont_wght.ttf") format("truetype-variations");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans Display";
+  src: url("fonts/NotoSansDisplay-VariableFont_wdth,wght.ttf") format("truetype-variations");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans Display";
+  src: url("fonts/NotoSansDisplay-Italic-VariableFont_wdth,wght.ttf") format("truetype-variations");
+  font-style: italic;
+}
