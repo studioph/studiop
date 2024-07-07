@@ -1,0 +1,22 @@
+---
+layout: site.njk
+items: {"Home": "/", "About": "/about", "Reel": "/reel", "Works": "/works"}
+---
+<header>
+    <div class="header">
+      <div class="header-inside">
+        {{ content | safe }}
+        <nav class="desktop" role="navigation" aria-label="Primary Menu" itemtype="http://schema.org/SiteNavigationElement">
+          <ul class="nav-list">
+            {% for name, href in items %}
+              <li class="nav-item">
+                <a class="nav-link {% if name === currentPage %}nav-current{% endif %}" {% if name === currentPage %}aria-current="page"{% endif %} href="{{ href }}">
+                  <span class="nav-text" >{{ name }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
